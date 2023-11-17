@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import ReactDOM from "react-dom/client";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root, {
   loader as rootLoader,
   action as rootAction,
@@ -16,7 +16,7 @@ import { action as destroyAction } from "./routes/destroy.jsx";
 import Index from "./routes/index.jsx";
 import ErrorPage from "./error-page.jsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
